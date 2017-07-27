@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<faces-config xmlns="http://java.sun.com/xml/ns/javaee" 
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+      http://java.sun.com/xml/ns/javaee/web-facesconfig_2_0.xsd"
+   version="2.0">
+   <navigation-rule>
+      <navigation-case>
+         <from-outcome>startOver</from-outcome>
+         <to-view-id>/index.xhtml</to-view-id>
+      </navigation-case>
+   </navigation-rule>
+   <navigation-rule>
+      <from-view-id>/again.xhtml</from-view-id>
+      <navigation-case>
+         <from-outcome>failure</from-outcome>
+         <to-view-id>/failure.xhtml</to-view-id>
+      </navigation-case>
+   </navigation-rule>
+   <navigation-rule>
+      <navigation-case>
+         <from-outcome>failure</from-outcome>
+         <to-view-id>/again.xhtml</to-view-id>
+      </navigation-case>
+   </navigation-rule>
+
+   <application>
+      <resource-bundle>
+         <base-name>com.corejsf.messages</base-name>
+         <var>msgs</var>
+      </resource-bundle>
+   </application>
+</faces-config>

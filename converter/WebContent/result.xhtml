@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"  
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://java.sun.com/jsf/core" 
+      xmlns:h="http://java.sun.com/jsf/html">
+   <h:head>
+      <h:outputStylesheet library="css" name="styles.css"/>
+      <title>#{msgs.title}</title>
+   </h:head>
+   <h:body>
+      <h:form>
+         <h1>#{msgs.paymentInformation}</h1>
+         <h:panelGrid columns="2">
+            #{msgs.amount}
+            <h:outputText value="#{payment.amount}">
+               <f:convertNumber type="currency"/>
+            </h:outputText>
+
+            #{msgs.creditCard}
+            <h:outputText value="#{payment.card}"/>
+
+            #{msgs.expirationDate}
+            <h:outputText value="#{payment.date}">
+               <f:convertDateTime pattern="MM/yyyy"/>
+            </h:outputText>
+         </h:panelGrid>
+         <h:commandButton value="#{msgs.back}" action="index"/>
+      </h:form>
+   </h:body>
+</html>

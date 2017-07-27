@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pageflow:Pageflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pageflow="http://www.sybase.com/suade/pageflow" id="pf14992166115820" configfile="/javaquiz/WebContent/WEB-INF/faces-config.xml">
+  <nodes xsi:type="pageflow:PFPage" name="*" x="122" y="370" id="pf14992168732081" outlinks="pf14992168732082 pf14992168732083" path="*"/>
+  <nodes xsi:type="pageflow:PFPage" name="index.xhtml" x="338" y="178" id="pf14992168732094" referenceLink="//@navigationRule.0/@navigationCase.0/@toViewId|" inlinks="pf14992168732082" path="/index.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="again.xhtml" x="338" y="562" id="pf14992168732125" referenceLink="//@navigationRule.2/@navigationCase.0/@toViewId|" outlinks="pf14992168732136" inlinks="pf14992168732083" path="/again.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="failure.xhtml" x="554" y="562" id="pf14992168732137" referenceLink="//@navigationRule.1/@navigationCase.0/@toViewId|" inlinks="pf14992168732136" path="/failure.xhtml"/>
+  <links id="pf14992168732082" target="pf14992168732094" source="pf14992168732081" outcome="startOver"/>
+  <links id="pf14992168732136" target="pf14992168732137" source="pf14992168732125" outcome="failure"/>
+  <links id="pf14992168732083" target="pf14992168732125" source="pf14992168732081" outcome="failure"/>
+</pageflow:Pageflow>
